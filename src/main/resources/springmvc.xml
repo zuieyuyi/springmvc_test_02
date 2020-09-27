@@ -77,10 +77,11 @@
     </bean>
 
 
-    <!-- 配置国际化页面拦截器（通过超链接选择语言那种）配置LocaleChangeInterceptor
-        主要用于获取请求中的locale信息，将期转为Locale对像，获取LocaleResolver对象    第二步：
-    -->
+
     <mvc:interceptors>
+        <!-- 配置国际化页面拦截器（通过超链接选择语言那种）配置LocaleChangeInterceptor
+            主要用于获取请求中的locale信息，将期转为Locale对像，获取LocaleResolver对象    第二步：
+        -->
         <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
     </mvc:interceptors>
 
