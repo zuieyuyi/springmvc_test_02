@@ -56,5 +56,8 @@
 
     <br><br>
     <a href="fileupload">fileupload</a>
+
+    <br><br>
+    <a href="testExceptionHandler?i=0">异常处理by zero（testExceptionHandler）</a>
 </body>
 </html>

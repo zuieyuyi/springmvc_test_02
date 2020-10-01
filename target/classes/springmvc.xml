@@ -80,6 +80,11 @@
 
     <mvc:interceptors>
         <bean id="myFirstInterceptor" class="com.test.springmvc.crud.interceptor.MyFirstInterceptor"></bean>
+        <!-- 配置拦截器作用的路径或不作用于那个路径 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/stus"/>
+            <bean id="mySecondInterceptor" class="com.test.springmvc.crud.interceptor.MySecondInterceptor"></bean>
+        </mvc:interceptor>
         <!-- 配置国际化页面拦截器（通过超链接选择语言那种）配置LocaleChangeInterceptor
             主要用于获取请求中的locale信息，将期转为Locale对像，获取LocaleResolver对象    第二步：
         -->
