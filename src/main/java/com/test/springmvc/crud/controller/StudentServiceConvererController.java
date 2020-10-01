@@ -65,9 +65,9 @@ public class StudentServiceConvererController {
     public String testFileUpload(@RequestParam("desc") String desc, @RequestParam("file") MultipartFile file) throws IOException {
         System.out.println("desc:" + desc);
         //获取文件原始的名字
-        System.out.println("OriginalFilename" + file.getOriginalFilename());
+        System.out.println("OriginalFilename:" + file.getOriginalFilename());
         //获取文件所对应的输入流
-        System.out.println("InputStream" + file.getInputStream());
+        System.out.println("InputStream:" + file.getInputStream());
         return "success";
     }
 
