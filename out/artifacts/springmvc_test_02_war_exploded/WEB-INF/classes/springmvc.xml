@@ -60,6 +60,7 @@
 <!--    <mvc:view-controller path="/i18n" view-name="i18n"></mvc:view-controller>-->
     <mvc:view-controller path="/i18n2" view-name="i18n2"></mvc:view-controller>
     <mvc:view-controller path="/fileupload" view-name="fileupload"></mvc:view-controller>
+    <mvc:view-controller path="/exceptiontest" view-name="exceptiontest"></mvc:view-controller>
 
     <!-- 国际化页面配置（通过超链接选择语言那种)
 	配置SessionLocaleResolver用于将Locale对象存储于Session中供后续使用(这里的Id只能用这个：localeResolver，否则会出问题)   第一步：
@@ -74,6 +75,19 @@
         <property name="defaultEncoding" value="UTF-8"></property>
         <!-- 最大上传字节 -->
         <property name="maxUploadSize" value="1024000"></property>
+    </bean>
+
+    <!-- 配置使用 SimpleMappingExceptionResolver 来映射异常 -->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <!--
+                    key 异常的全类名
+                    prop内容 出现该异常跳转的页面
+                -->
+                <prop key="java.lang.ArrayIndexOutOfBoundsException">error</prop>
+            </props>
+        </property>
     </bean>
 
 

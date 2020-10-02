@@ -59,5 +59,8 @@
 
     <br><br>
     <a href="testExceptionHandler?i=0">异常处理by zero（testExceptionHandler）</a>
+
+    <br><br>
+    <a href="exceptiontest">测试</a>
 </body>
 </html>
