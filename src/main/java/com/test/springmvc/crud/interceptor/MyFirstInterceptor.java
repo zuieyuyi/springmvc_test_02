@@ -18,7 +18,7 @@ public class MyFirstInterceptor implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("MyFristInterceptor  preHandle");
+        System.out.println("MyFirstInterceptor  preHandle");
         return true;
     }
 
@@ -30,7 +30,7 @@ public class MyFirstInterceptor implements HandlerInterceptor {
      */
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("MyFristInterceptor  postHandle");
+        System.out.println("MyFirstInterceptor  postHandle");
     }
 
     /**
@@ -41,6 +41,6 @@ public class MyFirstInterceptor implements HandlerInterceptor {
      */
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("MyFristInterceptor  afterCompletion");
+        System.out.println("MyFirstInterceptor  afterCompletion");
     }
 }
