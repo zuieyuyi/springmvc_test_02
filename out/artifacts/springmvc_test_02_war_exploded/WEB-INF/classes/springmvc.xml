@@ -79,6 +79,8 @@
 
     <!-- 配置使用 SimpleMappingExceptionResolver 来映射异常 -->
     <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <!-- 配置异常的属性名 -->
+        <property name="exceptionAttribute" value="exception"></property>
         <property name="exceptionMappings">
             <props>
                 <!--
